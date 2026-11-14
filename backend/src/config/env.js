@@ -5,7 +5,7 @@ const bool = z.enum(['true', 'false']).default('false').transform((v) => v === '
 
 const schema = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']).default('production'),
-  PORT: z.coerce.number().default(5000),
+  API_PORT: z.coerce.number().default(5000),
   MONGODB_URI: z.string().min(10, 'MONGODB_URI is required'),
   JWT_SECRET: z.string().min(32, 'JWT_SECRET must be at least 32 characters'),
   JWT_EXPIRES_IN: z.string().default('7d'),

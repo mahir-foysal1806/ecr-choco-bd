@@ -8,7 +8,7 @@ import { bootstrap } from './services/bootstrap.js';
 await connectDB();
 await bootstrap();
 
-const server = app.listen(env.PORT, () => console.log(`ECR Choco BD API listening on :${env.PORT} (${env.NODE_ENV})`));
+const server = app.listen(env.API_PORT, '0.0.0.0', () => console.log(`ECR Choco BD API listening on :${env.API_PORT} (${env.NODE_ENV})`));
 
 const shutdown = (sig) => {
   console.log(`${sig} received, shutting down`);
